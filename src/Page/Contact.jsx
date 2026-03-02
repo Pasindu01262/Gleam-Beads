@@ -2,7 +2,7 @@ import { useState } from 'react';
 import "./CSS/Contact.css"
 
 export default function Contact() {
-  const [result, setResult] = useState("");
+  
 
   const onSubmit = async (event) => {
     event.preventDefault();
