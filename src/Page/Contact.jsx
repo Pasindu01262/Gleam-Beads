@@ -9,25 +9,31 @@ export default function Contact() {
     const formData = new FormData(event.target);
     formData.append("access_key", "1777a241-2674-47cb-890d-cbf63186a971");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (data.success) {
-      alert("Form Submitted Successfully ✅");
-      event.target.reset();
-    } else {
-      alert("Error submitting form ❌");
+      if (data.success) {
+        alert("Form Submitted Successfully ✅");
+        event.target.reset();
+      } else {
+        alert("Error submitting form ❌");
+      }
+    } catch (error) {
+      alert("Something went wrong ❌");
     }
   };
 
   return (
-    <div>
+    <div className="contact-container">
+
       <div>
         <span className="main-topic">Contact Us</span>
+        <br />
         <span className="sub-topic">
           Please fill in the information below.
         </span>
@@ -86,10 +92,7 @@ export default function Contact() {
 
         </form>
       </div>
-    </div>
-  );
-}
-    </div>
+
     </div>
   );
 }
