@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import "./Navbar.css"
-import card_icon from "../Assest/Frontend_Assets/cart_icon.png"
 import logo from "../Assest/Frontend_Assets/logo.png"
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
@@ -9,7 +8,6 @@ import nav_dropdowm from "../Assest/Frontend_Assets/nav_dropdown.png"
 
 function Navbar() {
     const [menu,setmenu]=useState("Shop");
-    const {getTotalCartItem}=useContext(ShopContext);
     const menuRef=useRef();
 
     const dropdown_toggle=(e)=>{
