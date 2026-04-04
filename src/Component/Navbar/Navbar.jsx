@@ -2,8 +2,6 @@ import React, { useRef, useState } from 'react'
 import "./Navbar.css"
 import logo from "../Assest/Frontend_Assets/logo.png"
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { ShopContext } from '../../Contex/ShopContext';
 import nav_dropdowm from "../Assest/Frontend_Assets/nav_dropdown.png"
 
 function Navbar() {
