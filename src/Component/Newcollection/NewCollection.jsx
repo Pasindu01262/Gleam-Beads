@@ -8,7 +8,7 @@ function NewCollection() {
   const [new_collection, setNew_collection] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/newcollectiond') // ✅ Correct URL` 
+    fetch(`${process.env.REACT_APP_API_URL}/newcollection`) // ✅ Correct URL` 
 
       .then(response => {
         if (!response.ok) throw new Error("Network response was not OK");

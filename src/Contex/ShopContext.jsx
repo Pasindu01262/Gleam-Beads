@@ -14,14 +14,14 @@ const ShopContextProvider = ({ children }) => {
 
   // Fetch products
   useEffect(() => {
-    fetch("http://localhost:4000/allproduct")
+    fetch(`${process.env.REACT_APP_API_URL}/allproduct`)
       .then((res) => res.json())
       .then((data) => setAll_product(data))
       .catch((err) => console.error("Failed to fetch products:", err));
 
     const token = localStorage.getItem("auth-token");
     if (token) {
-      fetch("http://localhost:4000/getcart", {
+      fetch(`${process.env.REACT_APP_API_URL}/getcart`, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -44,7 +44,7 @@ const ShopContextProvider = ({ children }) => {
 
     const token = localStorage.getItem("auth-token");
     if (token) {
-      fetch("http://localhost:4000/addtocart", {
+      fetch(`${process.env.REACT_APP_API_URL}/addtocart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const ShopContextProvider = ({ children }) => {
 
     const token = localStorage.getItem("auth-token"); // FIXED: define token
     if (token) {
-      fetch("http://localhost:4000/removeFromCart", {
+      fetch(`${process.env.REACT_APP_API_URL}/removefromcart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
