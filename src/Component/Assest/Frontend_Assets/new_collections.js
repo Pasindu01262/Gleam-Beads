@@ -38,4 +38,6 @@ let new_collections = [
      old_price:15,
    },
 
+];
+
 export default new_collections;
