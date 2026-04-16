@@ -1,12 +1,15 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useContext } from 'react'
 import "./Navbar.css"
 import logo from "../Assest/Frontend_Assets/logo.png"
+import cart_icon from "../Assest/Frontend_Assets/cart_icon.png"
 import { Link } from 'react-router-dom';
 import nav_dropdowm from "../Assest/Frontend_Assets/nav_dropdown.png"
+import { ShopContext } from '../../Contex/ShopContext';
 
 function Navbar() {
     const [menu,setmenu]=useState("Shop");
     const menuRef=useRef();
+    const { getTotalCartItem } = useContext(ShopContext);
 
     const dropdown_toggle=(e)=>{
          menuRef.current.classList.toggle('nav-menu-visible');
@@ -27,12 +30,8 @@ function Navbar() {
            <li onClick={()=>{setmenu("Contact")}}>< Link to="/Contact" style={{textDecoration:"none"}}>Contact</ Link>{menu==="Contact"? <hr/>: <></>}</li>
         </ul>
         <div className='nav-login-cart'>
-          {localStorage.getItem('auth-token')?<button onClick={()=>{localStorage.removeItem('auth-token');window.location.replace('/')}}>Logout</button>:
-          <Link to="/login"><button>Login</button></Link>}
-           
-          {/* <Link to="/cart"><img src={card_icon } alt="card_icon "/></Link>
-           <div className='nav-cart-count'>{getTotalCartItem()}</div>*/}
-            
+          <Link to="/cart"><img src={cart_icon} alt="cart_icon"/></Link>
+          <div className='nav-cart-count'>{getTotalCartItem()}</div>
         </div>
     </div>
   )

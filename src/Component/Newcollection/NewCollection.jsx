@@ -1,29 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import "./NewCollection.css";
 import Item from '../Item/Item';
-//import all_product from "../../Component/Assest/Frontend_Assets/all_product"
+import new_collections from "../Assest/Frontend_Assets/new_collections";
 
 function NewCollection() {
-
-  const [new_collection, setNew_collection] = useState([]);
-
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/newcollection`) // ✅ Correct URL` 
-
-      .then(response => {
-        if (!response.ok) throw new Error("Network response was not OK");
-        return response.json();
-      })
-      .then(data => setNew_collection(data))
-      .catch(err => console.error("Failed to fetch new collections:", err));
-  }, []); 
-
   return (
     <div className='new-collection'>
       <h1>NEW COLLECTIONS</h1>
       <hr/>
       <div className='collection'>
-        {new_collection.map((item, i) => (
+        {new_collections.map((item, i) => (
           <Item 
             key={i} 
             id={item.id} 

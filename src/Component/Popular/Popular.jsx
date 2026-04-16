@@ -1,42 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Popular.css";
 import Item from "../Item/Item";
-
-
+import data_product from "../Assest/Frontend_Assets/data";
 
 function Popular() {
-
-  const [popularProduct, setPopularProduct] = useState([]);
-
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/popularinwomen`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Network response was not OK");
-        }
-        return response.json();
-      })
-      .then(data => {
-        if (Array.isArray(data)) {
-          setPopularProduct(data);
-        } else {
-          console.error("Backend did not return an array:", data);
-          setPopularProduct([]); 
-        }
-      })
-      .catch(err => console.error("Fetch error:", err));
-  }, []);
-
-  //creating endpoint for adding products in cartdata
-
-  
-
   return (
     <div className="popular">
       <h1>POPULAR IN WOMEN</h1>
       <hr />
       <div className="popular_item">
-        {popularProduct.map((item, i) => (
+        {data_product.map((item, i) => (
           <Item
             key={i}
             id={item.id}

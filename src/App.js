@@ -2,7 +2,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './Component/Navbar/Navbar';
 import ShopCategory from './Page/ShopCategory';
-import LoginSignup from './Page/LoginSignup';
 import Shop from "./Page/Shop"
 import Product from "./Page/Product"
 import  Cart from "./Page/Cart" 
@@ -11,6 +10,7 @@ import men_banner from "./Component/Assest/Frontend_Assets/banner_mens.png"
 import women_banner from "./Component/Assest/Frontend_Assets/banner_women.png"
 import kids_banner from "./Component/Assest/Frontend_Assets/banner_kids.png"
 import Contact from './Page/Contact';
+import ManageProduct from './Page/Product';
 
 function App() {
   return (
@@ -27,8 +27,8 @@ function App() {
                    <Route path=':productId' element={<Product/>}/>
               </Route>
               <Route path='/cart' element={<Cart/>}/>
-              <Route path='/login' element={<LoginSignup/>}/>
               <Route path='/Contact' element={<Contact/>}/>
+              <Route path='/manage' element={<ManageProduct/>}/>
           </Routes>
           <Footer/>
        </BrowserRouter>
