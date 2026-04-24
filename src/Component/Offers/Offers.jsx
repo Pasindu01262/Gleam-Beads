@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Offers.css"
 import exclusive_image from "../Assest/Frontend_Assets/exclusive_image.png"
+import { Link } from "react-router-dom";
+
 
 function Offers() {
   return (
@@ -9,7 +11,7 @@ function Offers() {
           <h1>Exclusive</h1>
             <h1>offers for you</h1>
             <p>ONLY ON BEST SELLERS PRODUCTS</p>
-            <button>Check Now</button>
+            <Link className='link' to="/womens" >Check Now</Link>
         </div>
         <div className='offers-right'>
             <img src={exclusive_image} alt='exclusive_image'/>
@@ -17,5 +19,6 @@ function Offers() {
     </div>
   )
 }
+
 
 export default Offers

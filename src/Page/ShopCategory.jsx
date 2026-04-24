@@ -3,13 +3,15 @@ import "./CSS/ShopCategory.css"
 import { ShopContext } from '../Contex/ShopContext'
 import dropdown_icon from "../Component/Assest/Frontend_Assets/dropdown_icon.png"
 import Item from "../Component/Item/Item"
-import Add_image from "../Component/Assest/Frontend_Assets/add.jpg"
+import Add_image from "../Component/Assest/Frontend_Assets/banner_mens.png"
+import Add_image_mobile from "../Component/Assest/Frontend_Assets/banner_mens_mobile.png"
 
 function ShopCategory(props) {
   const {all_product}=useContext(ShopContext);
   return (
     <div className='shop-catagory'>
          <img style={{height:"430px"}}className='shopcategory-banner' src={Add_image} alt="banner"/> {/*src={props.banner}*/} 
+          <img style={{height:"430px"}}className='shopcategory-banner_mobile' src={Add_image_mobile} alt="banner"/> {/*src={props.banner}*/} 
         <div className='shopcategory-indexsort'>
           <p>
             <span>Showing 1-12</span> out of products
@@ -31,9 +33,9 @@ function ShopCategory(props) {
               }
           })}
         </div>
-        <div className='shopcategory-loadmore'>
+        {/*<div className='shopcategory-loadmore'>
              Explore More
-        </div>
+        </div>*/}
     </div>
   )
 }

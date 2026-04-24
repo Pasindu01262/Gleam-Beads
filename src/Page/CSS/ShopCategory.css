@@ -44,6 +44,10 @@
     font-weight: 500;
 }
 
+.shopcategory-banner_mobile{
+        display: none;
+    }
+
 @media(max-width:1280px)
 {
     .shopcategory-banner
@@ -87,11 +91,36 @@
         font-size: 16px;
 
     }
+
+    .shopcategory-banner_mobile{
+        display: none;
+    }
+}
+
+@media(max-width:1024px){
+         .shopcategory-banner_mobile{
+        display: none;
+
+         .shopcategory-banner
+    {
+        margin: 20px auto;
+        width: 100%;
+    
+    }
+     }
 }
 
 @media(max-width:800px){
-     .shopcategory-banner{
-        width: 95%;
+    
+
+    .shopcategory-banner{
+         display: block;
+        margin: 30px auto;
+        width: 120%;
+     }
+
+     .shopcategory-banner_mobile{
+        display: none;
      }
 
      .shopcategory-product{
@@ -112,6 +141,16 @@
         .shopcategory-product{
             grid-template-columns: 1fr 1fr ;
         }
+
+         .shopcategory-banner_mobile{
+         display: block;
+        margin: 30px auto;
+        width: 70%;
+     }
+
+         .shopcategory-banner{
+         display: none;
+     }
     }
 
 

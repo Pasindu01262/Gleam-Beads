@@ -1,42 +1,42 @@
-import p1_img from './1.jpg'
-import p2_img from './2.jpg'
-import p3_img from './3.jpg'
-import p4_img from './4.jpg'
-import p5_img from './5.jpg'
+import p14_img from './product_14.png'
+import p15_img from './product_15.png'
+import p16_img from './product_16.png'
+import p18_img from './product_18.png'
 
 let new_collections = [
 {
-     id:1,
-     name:"product 1",
-     image:p1_img,
-     new_price:50,
-     old_price:40,
-   },
-   {id:2,
-     name:"product 2",
-     image:p2_img,
-     new_price:60,
-     old_price:55,
-   },
-   {id:3,
-     name:"product 3",
-     image:p3_img,
-     new_price:100,
-     old_price:80,
-   },
-   {id:4,
-     name:"product 4",
-     image:p4_img,
-     new_price:80,
-     old_price:70,
-   },
+    id:12345,
+    name:"White color jacket",
+    image:p14_img,
+    new_price:6500,
+    old_price:7500,
+    color:"white",
+  },
  
-   {id:5,
-     name:"product 5",
-     image:p5_img,
-     new_price:20,
-     old_price:15,
-   },
+  {id:12468,
+    name:"black color jacket",
+    image:p15_img,
+    new_price:10000,
+    old_price:11000,
+    color:"black",
+  },
+  {id:35797,
+    name:"Active Block Hooded Jacket",
+    image:p16_img,
+    new_price:15000,
+    old_price:20000,
+    color:"Block",
+  },
+
+ 
+
+  {id:18008,
+    name:"gray color Tshirt",
+    image:p18_img,
+    new_price:5000,
+    old_price:6500,
+    color:"light Gray",
+  },
 
 ];
 

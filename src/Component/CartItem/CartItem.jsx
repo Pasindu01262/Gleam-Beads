@@ -33,14 +33,14 @@ function CartItem() {
 
                                 <p>{e.name}</p>
 
-                                <p className='new-price'>${e.new_price}</p>
+                                <p className='new-price'>Rs {e.new_price}</p>
 
                                 <button className='carticon-quantity'>
                                     {cartItems[e.id]}
                                 </button>
 
                                 <p>
-                                    ${e.new_price * cartItems[e.id]}
+                                    Rs{e.new_price * cartItems[e.id]}
                                 </p>
 
                                 <img
@@ -63,7 +63,7 @@ function CartItem() {
 
                     <div className='cartitem-total-item'>
                         <p>Subtotal</p>
-                        <p>${getTotalCartAmount()}</p>
+                        <p>Rs{getTotalCartAmount()}</p>
                     </div>
 
                     <hr />
@@ -77,7 +77,7 @@ function CartItem() {
 
                     <div className='cartitem-total-item'>
                         <h3>Total</h3>
-                        <h3>${getTotalCartAmount()}</h3>
+                        <h3>Rs{getTotalCartAmount()}</h3>
                     </div>
 
                     <button>PROCEED TO CHECKOUT</button>

@@ -62,6 +62,14 @@
     color: #ff4141;
 }
 
+.color{
+    display: flex;
+    margin: 10px 0px;
+    gap: 30px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
 .productdispaly-right-size h1{
         margin-top: 55px;
         color: #656565;
@@ -101,9 +109,109 @@
 }
 
 .item-details{
-   font-size: 15px;
+    font-size: 16px;
+       font-weight: 500;
 
 }
+
+/* Base style for all size boxes */
+.productdisplay-right-sizes div {
+    padding: 10px 10px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    background: #fbfbfb;
+    border: 1px solid #ebebeb; /* Default border */
+    transition: 0.2s;
+}
+
+/* Style when a size is selected */
+.productdisplay-right-sizes div.active {
+    border: 2px solid #ff4141;
+    background: #fff;
+    font-weight: 600;
+}
+
+
+/* Container for the Quantity section */
+.quantity-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.quantity-container p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* The white box with the black border */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    height: 40px;
+    border: 1px solid #000;
+    background-color: #fff; /* Ensures the box is white */
+}
+
+/* Resetting the buttons to stay inside the box */
+.quantity-selector button {
+    all: unset; /* Resets default button styles that might be causing the red blocks */
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: #060606;
+    transition: background-color 0.2s ease;
+}
+
+
+
+/* The number in the middle */
+.quantity-selector span {
+    font-size: 16px;
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+}
+
+    .productdisplay-right-size p{
+       font-size: 16px;
+       font-weight: 500;
+       
+}
+
+
+
+.result-alert {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #fff3cd; /* Light yellow background */
+    color: #856404;            /* Dark brownish-yellow text */
+    border: 1px solid #ffeeba; /* Muted yellow border */
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    animation: fadeIn 0.4s ease; /* Smooth fade-in effect */
+}
+
+/* Optional: Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
 
 
 
@@ -152,6 +260,12 @@
 
      }
 
+     .productdisplay-right-size p{
+       font-size: 16px;
+       font-weight: 500;
+       
+}
+
      .productdispaly-right-size h1{
         margin-top: 20px;
         font-size: 20px;
@@ -172,6 +286,18 @@
         margin-top: 5px;
         font-size: 14px;
      }
+
+     .color{
+      font-size: 18px;
+}
+ 
+ .item-details{
+    font-size: 16px;
+       font-weight: 500;
+ }
+
+
+
 }
 
 
@@ -213,6 +339,11 @@
 
      }
 
+       .productdisplay-right-description{
+        font-size: 12px;
+
+     }
+
      .productdispaly-right-size{
         margin-top: 10p 0px;
      }
@@ -234,6 +365,23 @@
        
         font-size: 12px;
      }
+
+
+
+
+
+
+/* Resetting the buttons to stay inside the box */
+.quantity-selector button {
+  
+    font-size: 25px;
+
+}
+
+
+
+
+
 }
 
 
@@ -281,6 +429,11 @@
 
      }
 
+       .productdisplay-right-description{
+        font-size: 10px;
+
+     }
+
      .productdispaly-right-size h1{
         margin-top: 10px 0px;
      }
@@ -304,6 +457,19 @@
        
         font-size: 10px;
      }
+
+     .productdisplay-right-sizes div {
+    padding: 8px 8px;
+     }
+
+     .quantity-selector button {
+  
+    font-size: 22px;
+
+}
+
+
+
 }
 
 
@@ -368,6 +534,20 @@
     .productdisplay-right-category{
         font-size: 16px;
     }
+
+    .productdisplay-right-sizes div {
+    padding: 8px 8px;
+    
+}
+
+    .quantity-selector button {
+  
+    font-size: 23px;
+
+}
+
+
+
 
 
 }

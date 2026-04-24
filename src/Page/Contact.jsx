@@ -78,7 +78,7 @@ export default function Contact() {
             required
           />
 
-          <label className="text-box-name">Message:</label>
+          <label className="text-box-name">Feedback:</label>
           <textarea
             className="text-box"
             name="message"

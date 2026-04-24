@@ -5,7 +5,7 @@
    margin: auto;
    padding: 0px 140px;
    margin-bottom: 150px;
-   background:linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+   background:linear-gradient(190deg, #37353799 0%, #e1ffea22 60%);
 
 }
 
@@ -22,23 +22,29 @@
     font-weight: 600;
 }
 
-offers-left p{
+.offers-left p{
     color: #171717;
     font-size: 22px;
     font-weight: 600;
 }
 
-.offers-left button{
+.link{
     width: 282px;
     height: 70px;
     border-radius: 35px;
-    background: #ff4141;
+    background: #111010;
     border: none;
     color: white;
     font-size: 22px;
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: 20px;
     cursor: pointer;
+    text-align: center;
+    text-decoration:none;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
+
 }
 
 .offers-right{
@@ -68,10 +74,13 @@ offers-left p{
         width: 300px;
     }
 
-    .offers-left button{
+    .link{
         width: 220px;
         height: 50px;
         font-size: 18px;
+         display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
     }
 
     .offers-right{
@@ -101,10 +110,13 @@ offers-left p{
         width: 200px;
     }
 
-    .offers-left button{
+    .link{
         width: 160px;
         height: 40px;
         font-size: 16px;
+         display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
     }
 
     .offers-right{
@@ -132,10 +144,13 @@ offers-left p{
         width: 180px;
     }
 
-    .offers-left button{
+    .link{
         width: 140px;
         height: 30px;
         font-size: 12px;
+         display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
     }
 
 }
@@ -160,11 +175,14 @@ offers-left p{
         width: 120px;
     }
 
-    .offers-left button{
+    .link{
         width: 120px;
         height: 25px;
         font-size: 10px;
         margin-top: 12px;
+         display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
     }
 
 }

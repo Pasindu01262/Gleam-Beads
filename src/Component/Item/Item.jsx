@@ -9,10 +9,10 @@ function Item(props) {
       <p>{props.name}</p>
       <div className='item-price'>
         <div className='item-price-new'>
-            ${props.new_price}
+            Rs {props.new_price}.00
         </div>
         <div className='item-price-old'>
-            ${props.old_price}
+            Rs {props.old_price}.00
         </div>
       </div>
     </div>

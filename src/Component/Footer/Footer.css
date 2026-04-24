@@ -6,15 +6,23 @@
     gap: 50px;
 }
 
+
+
 .footer-logo{
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
+.footer-logo img{
+  width: 70px;
+  height: 70px;
+  background-color:#01243d;
+}
+
 .footer-logo p{
     color: #383838;
-    font-size: 46px;
+    font-size: 50px;
     font-weight: 700;
 }
 
@@ -24,22 +32,25 @@
     gap: 50px;
     color: #252525;
     font-size: 20px;
+   
 }
 
-.footer-links li{
-    cursor: pointer;
+.footer-links li a {
+    text-decoration: none;
+  color: inherit; /* Keeps the color the same as the parent text */
+  transition: 0.3s;
+   cursor: pointer;
 }
 
-.footer-soctal-icon{
-    display: flex;
-    gap: 20px;
-}
+
+
 
 .footer-icon-container{
     padding: 10px;
     padding-bottom: 6px;
     background: #fbfbfb;
     border: 1px solid #ebebeb;
+    
 
 }
 
@@ -64,6 +75,51 @@
 }
 
 
+
+
+/* Container styling to center the button */
+.whatsapp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* The Anchor tag styling */
+.whatsapp-container a {
+    text-decoration: none; /* Removes underline */
+}
+
+/* The actual button */
+.whatsapp-btn {
+    background-color: #28d266; /* WhatsApp Green */
+    color: white;
+    padding: 14px 26px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px; /* Rounded pill shape */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+/* Hover effect */
+.whatsapp-btn:hover {
+    background-color: #128C7E; /* Darker WhatsApp Teal */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(18, 140, 126, 0.4);
+}
+
+/* Active/Click effect */
+.whatsapp-btn:active {
+    transform: translateY(0);
+}
+
+
 @media(max-width:800px){
       .footer{
         gap: 20px;
@@ -76,6 +132,7 @@
 
       .footer-logo img{
         width: 40px;
+        height: 40px;
       }
 
       .footer-logo p{
@@ -87,13 +144,18 @@
         gap: 10px;
       }
 
-      .footer-soctal-icon img{
-        width: 22px;
-      }
+     
 
       .footer-copyright{
         font-size: 13px;
       }
+
+      .whatsapp-btn {
+   
+    padding: 12px 24px;
+    font-size: 18px;
+    
+}
 
       
 }

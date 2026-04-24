@@ -6,7 +6,7 @@ import data_product from "../Assest/Frontend_Assets/data";
 function Popular() {
   return (
     <div className="popular">
-      <h1>POPULAR IN WOMEN</h1>
+      <h1>POPULAR IN MEN</h1>
       <hr />
       <div className="popular_item">
         {data_product.map((item, i) => (
